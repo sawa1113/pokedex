@@ -1,0 +1,2 @@
+class Sinnoh < ApplicationRecord
+end

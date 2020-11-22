@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @galar.name %>
+</p>
+
+<p>
+  <strong>Type 1:</strong>
+  <%= @galar.type_1 %>
+</p>
+
+<p>
+  <strong>Type 2:</strong>
+  <%= @galar.type_2 %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @galar.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @galar.weight %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @galar.description %>
+</p>
+
+<%= link_to 'Edit', edit_galar_path(@galar) %> |
+<%= link_to 'Back', galars_path %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Galars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type 1</th>
+      <th>Type 2</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @galars.each do |galar| %>
+      <tr>
+        <td><%= galar.name %></td>
+        <td><%= galar.type_1 %></td>
+        <td><%= galar.type_2 %></td>
+        <td><%= galar.height %></td>
+        <td><%= galar.weight %></td>
+        <td><%= galar.description %></td>
+        <td><%= link_to 'Show', galar %></td>
+        <td><%= link_to 'Edit', edit_galar_path(galar) %></td>
+        <td><%= link_to 'Destroy', galar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Galar', new_galar_path %>

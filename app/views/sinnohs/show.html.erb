@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sinnoh.name %>
+</p>
+
+<p>
+  <strong>Type 1:</strong>
+  <%= @sinnoh.type_1 %>
+</p>
+
+<p>
+  <strong>Type 2:</strong>
+  <%= @sinnoh.type_2 %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @sinnoh.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @sinnoh.weight %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sinnoh.description %>
+</p>
+
+<%= link_to 'Edit', edit_sinnoh_path(@sinnoh) %> |
+<%= link_to 'Back', sinnohs_path %>

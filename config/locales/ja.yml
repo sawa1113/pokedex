@@ -1,0 +1,65 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: ユーザー名
+        email: メール
+        password: パスワード
+        password_confirmation: パスワード（確認）
+      kanto:
+        name: 名前
+        type_1: タイプ1
+        type_2: タイプ2
+        height: 高さ
+        weight: 重さ
+        description: 説明 
+      johto:
+        name: 名前
+        type_1: タイプ1
+        type_2: タイプ2
+        height: 高さ
+        weight: 重さ
+        description: 説明 
+      hoenn:
+        name: 名前
+        type_1: タイプ1
+        type_2: タイプ2
+        height: 高さ
+        weight: 重さ
+        description: 説明 
+      sinnoh:
+        name: 名前
+        type_1: タイプ1
+        type_2: タイプ2
+        height: 高さ
+        weight: 重さ
+        description: 説明 
+      unova:
+        name: 名前
+        type_1: タイプ1
+        type_2: タイプ2
+        height: 高さ
+        weight: 重さ
+        description: 説明 
+      kalos:
+        name: 名前
+        type_1: タイプ1
+        type_2: タイプ2
+        height: 高さ
+        weight: 重さ
+        description: 説明 
+      alola:
+        name: 名前
+        type_1: タイプ1
+        type_2: タイプ2
+        height: 高さ
+        weight: 重さ
+        description: 説明 
+      galar:
+        name: 名前
+        type_1: タイプ1
+        type_2: タイプ2
+        height: 高さ
+        weight: 重さ
+        description: 説明
+    views:

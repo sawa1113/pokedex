@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @alola.name %>
+</p>
+
+<p>
+  <strong>Type 1:</strong>
+  <%= @alola.type_1 %>
+</p>
+
+<p>
+  <strong>Type 2:</strong>
+  <%= @alola.type_2 %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @alola.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @alola.weight %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @alola.description %>
+</p>
+
+<%= link_to 'Edit', edit_alola_path(@alola) %> |
+<%= link_to 'Back', alolas_path %>
