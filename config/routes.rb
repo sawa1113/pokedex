@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   #   mount RailsDb::Engine => '/rails/db', :as => 'rails_db'
   # end
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   root 'home#index'
   get 'home/index'
   resources :kantos
