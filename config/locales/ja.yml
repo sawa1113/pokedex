@@ -36,7 +36,7 @@ ja:
         height: 高さ
         weight: 重さ
         description: 説明 
-      kalos:
+      kalo:
         name: 名前
         type_1: タイプ1
         type_2: タイプ2
