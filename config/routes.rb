@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  # if Rails.env.development?
+  #   mount RailsDb::Engine => '/rails/db', :as => 'rails_db'
+  # end
+
+  devise_for :users
+  root 'home#index'
+  get 'home/index'
   resources :kantos
   resources :galars
   resources :alolas
