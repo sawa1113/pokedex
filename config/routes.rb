@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # end
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
+  get "users/show" => "users#show"
   root 'home#index'
   get 'home/index'
   resources :kantos
