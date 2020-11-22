@@ -1,0 +1,2 @@
+module AlolasHelper
+end

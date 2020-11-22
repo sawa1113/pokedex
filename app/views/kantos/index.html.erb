@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kantos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type 1</th>
+      <th>Type 2</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kantos.each do |kanto| %>
+      <tr>
+        <td><%= kanto.name %></td>
+        <td><%= kanto.type_1 %></td>
+        <td><%= kanto.type_2 %></td>
+        <td><%= kanto.height %></td>
+        <td><%= kanto.weight %></td>
+        <td><%= kanto.description %></td>
+        <td><%= link_to 'Show', kanto %></td>
+        <td><%= link_to 'Edit', edit_kanto_path(kanto) %></td>
+        <td><%= link_to 'Destroy', kanto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kanto', new_kanto_path %>

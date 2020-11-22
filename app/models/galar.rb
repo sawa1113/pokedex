@@ -1,0 +1,2 @@
+class Galar < ApplicationRecord
+end

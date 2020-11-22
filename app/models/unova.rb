@@ -1,0 +1,2 @@
+class Unova < ApplicationRecord
+end

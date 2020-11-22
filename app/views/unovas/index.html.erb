@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Unovas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type 1</th>
+      <th>Type 2</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @unovas.each do |unova| %>
+      <tr>
+        <td><%= unova.name %></td>
+        <td><%= unova.type_1 %></td>
+        <td><%= unova.type_2 %></td>
+        <td><%= unova.height %></td>
+        <td><%= unova.weight %></td>
+        <td><%= unova.description %></td>
+        <td><%= link_to 'Show', unova %></td>
+        <td><%= link_to 'Edit', edit_unova_path(unova) %></td>
+        <td><%= link_to 'Destroy', unova, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Unova', new_unova_path %>

@@ -1,0 +1,2 @@
+class Hoenn < ApplicationRecord
+end
