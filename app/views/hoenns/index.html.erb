@@ -1,16 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Hoenns</h1>
+<h1>ホウエン地方</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Type 1</th>
-      <th>Type 2</th>
-      <th>Height</th>
-      <th>Weight</th>
-      <th>Description</th>
+      <th>名前</th>
+      <th>タイプ1</th>
+      <th>タイプ2</th>
+      <th>高さ</th>
+      <th>重さ</th>
+      <th>説明</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,9 +24,9 @@
         <td><%= hoenn.height %></td>
         <td><%= hoenn.weight %></td>
         <td><%= hoenn.description %></td>
-        <td><%= link_to 'Show', hoenn %></td>
-        <td><%= link_to 'Edit', edit_hoenn_path(hoenn) %></td>
-        <td><%= link_to 'Destroy', hoenn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', hoenn %></td>
+        <td><%= link_to '編集', edit_hoenn_path(hoenn) %></td>
+        <td><%= link_to '削除', hoenn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,6 @@
 
 <br>
 
-<%= link_to 'New Hoenn', new_hoenn_path %>
+<%= link_to '新しいポケモンを登録する', new_hoenn_path %>
+
+<%= link_to 'ホーム', home_index_path %>
