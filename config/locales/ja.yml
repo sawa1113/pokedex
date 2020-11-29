@@ -2,6 +2,7 @@ ja:
   activerecord:
     attributes:
       kanto:
+        number: No.
         name: 名前
         type_1: タイプ1
         type_2: タイプ2
@@ -9,6 +10,7 @@ ja:
         weight: 重さ
         description: 説明 
       johto:
+        number: No.
         name: 名前
         type_1: タイプ1
         type_2: タイプ2
@@ -16,6 +18,7 @@ ja:
         weight: 重さ
         description: 説明 
       hoenn:
+        number: No.
         name: 名前
         type_1: タイプ1
         type_2: タイプ2
@@ -23,6 +26,7 @@ ja:
         weight: 重さ
         description: 説明 
       sinnoh:
+        number: No.
         name: 名前
         type_1: タイプ1
         type_2: タイプ2
@@ -30,6 +34,7 @@ ja:
         weight: 重さ
         description: 説明 
       unova:
+        number: No.
         name: 名前
         type_1: タイプ1
         type_2: タイプ2
@@ -37,6 +42,7 @@ ja:
         weight: 重さ
         description: 説明 
       kalo:
+        number: No.
         name: 名前
         type_1: タイプ1
         type_2: タイプ2
@@ -44,6 +50,7 @@ ja:
         weight: 重さ
         description: 説明 
       alola:
+        number: No.
         name: 名前
         type_1: タイプ1
         type_2: タイプ2
@@ -51,6 +58,7 @@ ja:
         weight: 重さ
         description: 説明 
       galar:
+        number: No.
         name: 名前
         type_1: タイプ1
         type_2: タイプ2

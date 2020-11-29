@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_22_113510) do
+ActiveRecord::Schema.define(version: 2020_11_23_031506) do
 
   create_table "alolas", force: :cascade do |t|
     t.string "name"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2020_11_22_113510) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "number"
+    t.string "image"
   end
 
   create_table "galars", force: :cascade do |t|
@@ -32,6 +34,8 @@ ActiveRecord::Schema.define(version: 2020_11_22_113510) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "number"
+    t.string "image"
   end
 
   create_table "hoenns", force: :cascade do |t|
@@ -43,6 +47,8 @@ ActiveRecord::Schema.define(version: 2020_11_22_113510) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "number"
+    t.string "image"
   end
 
   create_table "johtos", force: :cascade do |t|
@@ -54,6 +60,8 @@ ActiveRecord::Schema.define(version: 2020_11_22_113510) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "number"
+    t.string "image"
   end
 
   create_table "kalos", force: :cascade do |t|
@@ -65,6 +73,8 @@ ActiveRecord::Schema.define(version: 2020_11_22_113510) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "number"
+    t.string "image"
   end
 
   create_table "kantos", force: :cascade do |t|
@@ -76,6 +86,8 @@ ActiveRecord::Schema.define(version: 2020_11_22_113510) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "number"
+    t.string "image"
   end
 
   create_table "sinnohs", force: :cascade do |t|
@@ -87,6 +99,8 @@ ActiveRecord::Schema.define(version: 2020_11_22_113510) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "number"
+    t.string "image"
   end
 
   create_table "unovas", force: :cascade do |t|
@@ -98,6 +112,8 @@ ActiveRecord::Schema.define(version: 2020_11_22_113510) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "number"
+    t.string "image"
   end
 
   create_table "users", force: :cascade do |t|
