@@ -69,6 +69,6 @@ class GalarsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def galar_params
-      params.require(:galar).permit(:name, :type_1, :type_2, :height, :weight, :description)
+      params.require(:galar).permit(:name, :type_1, :type_2, :height, :weight, :description, :number)
     end
 end

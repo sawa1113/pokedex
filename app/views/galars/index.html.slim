@@ -6,6 +6,8 @@ table
   thead
     tr
       th
+        | 番号
+      th
         | 名前
       th
         | タイプ1
@@ -21,6 +23,8 @@ table
   tbody
     - @galars.each do |galar|
       tr
+        td
+          = galar.number
         td
           = galar.name
         td

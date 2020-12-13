@@ -69,6 +69,6 @@ class SinnohsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def sinnoh_params
-      params.require(:sinnoh).permit(:name, :type_1, :type_2, :height, :weight, :description)
+      params.require(:sinnoh).permit(:name, :type_1, :type_2, :height, :weight, :description, :number)
     end
 end
