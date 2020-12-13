@@ -1,0 +1,29 @@
+p#notice
+  = notice
+p
+  strong
+    | 名前:
+  = @alola.name
+p
+  strong
+    | タイプ1:
+  = @alola.type_1
+p
+  strong
+    | タイプ2:
+  = @alola.type_2
+p
+  strong
+    | 高さ:
+  = @alola.height
+p
+  strong
+    | 重さ:
+  = @alola.weight
+p
+  strong
+    | 説明:
+  = @alola.description
+= link_to '編集', edit_alola_path(@alola)
+|  | 
+= link_to '戻る', alolas_path

@@ -1,0 +1,29 @@
+p#notice
+  = notice
+p
+  strong
+    | 名前:
+  = @sinnoh.name
+p
+  strong
+    | タイプ1:
+  = @sinnoh.type_1
+p
+  strong
+    | タイプ2:
+  = @sinnoh.type_2
+p
+  strong
+    | 高さ:
+  = @sinnoh.height
+p
+  strong
+    | 重さ:
+  = @sinnoh.weight
+p
+  strong
+    | 説明:
+  = @sinnoh.description
+= link_to '編集', edit_sinnoh_path(@sinnoh)
+|  | 
+= link_to '戻る', sinnohs_path

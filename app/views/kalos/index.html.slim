@@ -1,0 +1,44 @@
+p#notice
+  = notice
+h1
+  | カロス地方
+table
+  thead
+    tr
+      th
+        | 名前
+      th
+        | タイプ1
+      th
+        | タイプ2
+      th
+        | 高さ
+      th
+        | 重さ
+      th
+        | 説明
+      th[colspan="3"]
+  tbody
+    - @kalos.each do |kalo|
+      tr
+        td
+          = kalo.name
+        td
+          = kalo.type_1
+        td
+          = kalo.type_2
+        td
+          = kalo.height
+        td
+          = kalo.weight
+        td
+          = kalo.description
+        td
+          = link_to '詳細', kalo
+        td
+          = link_to '編集', edit_kalo_path(kalo)
+        td
+          = link_to '削除', kalo, method: :delete, data: { confirm: '削除してもいいですか?' }
+br
+= link_to '新しいポケモンを登録する', new_kalo_path
+= link_to 'ホーム', home_index_path

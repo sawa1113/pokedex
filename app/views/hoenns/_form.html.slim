@@ -1,0 +1,30 @@
+= form_with(model: hoenn, local: true) do |form|
+  - if hoenn.errors.any?
+    #error_explanation
+      h2
+        = pluralize(hoenn.errors.count, "error")
+        |  prohibited this hoenn from being saved:
+      ul
+        - hoenn.errors.full_messages.each do |message|
+          li
+            = message
+  .field
+    = form.label :name
+    = form.text_field :name
+  .field
+    = form.label :type_1
+    = form.text_field :type_1
+  .field
+    = form.label :type_2
+    = form.text_field :type_2
+  .field
+    = form.label :height
+    = form.text_field :height
+  .field
+    = form.label :weight
+    = form.text_field :weight
+  .field
+    = form.label :description
+    = form.text_field :description
+  .actions
+    = form.submit

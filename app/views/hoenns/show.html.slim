@@ -1,0 +1,29 @@
+p#notice
+  = notice
+p
+  strong
+    | 名前:
+  = @hoenn.name
+p
+  strong
+    | タイプ1:
+  = @hoenn.type_1
+p
+  strong
+    | タイプ2:
+  = @hoenn.type_2
+p
+  strong
+    | 高さ:
+  = @hoenn.height
+p
+  strong
+    | 重さ:
+  = @hoenn.weight
+p
+  strong
+    | 説明:
+  = @hoenn.description
+= link_to '編集', edit_hoenn_path(@hoenn)
+|  | 
+= link_to '戻る', hoenns_path
