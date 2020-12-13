@@ -1,0 +1,29 @@
+p#notice
+  = notice
+p
+  strong
+    | 名前:
+  = @galar.name
+p
+  strong
+    | タイプ1:
+  = @galar.type_1
+p
+  strong
+    | タイプ2:
+  = @galar.type_2
+p
+  strong
+    | 高さ:
+  = @galar.height
+p
+  strong
+    | 重さ:
+  = @galar.weight
+p
+  strong
+    | 説明:
+  = @galar.description
+= link_to '編集', edit_galar_path(@galar)
+|  | 
+= link_to '戻る', galars_path

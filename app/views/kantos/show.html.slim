@@ -1,0 +1,29 @@
+p#notice
+  = notice
+p
+  strong
+    | 名前:
+  = @kanto.name
+p
+  strong
+    | タイプ1:
+  = @kanto.type_1
+p
+  strong
+    | タイプ2:
+  = @kanto.type_2
+p
+  strong
+    | 高さ:
+  = @kanto.height
+p
+  strong
+    | 重さ:
+  = @kanto.weight
+p
+  strong
+    | 説明:
+  = @kanto.description
+= link_to '編集', edit_kanto_path(@kanto)
+|  | 
+= link_to '戻る', kantos_path

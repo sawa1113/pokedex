@@ -1,0 +1,29 @@
+p#notice
+  = notice
+p
+  strong
+    | 名前:
+  = @johto.name
+p
+  strong
+    | タイプ1:
+  = @johto.type_1
+p
+  strong
+    | タイプ2:
+  = @johto.type_2
+p
+  strong
+    | 高さ:
+  = @johto.height
+p
+  strong
+    | 重さ:
+  = @johto.weight
+p
+  strong
+    | 説明:
+  = @johto.description
+= link_to '編集', edit_johto_path(@johto)
+|  | 
+= link_to '戻る', johtos_path

@@ -1,0 +1,29 @@
+p#notice
+  = notice
+p
+  strong
+    | 名前:
+  = @kalo.name
+p
+  strong
+    | タイプ1:
+  = @kalo.type_1
+p
+  strong
+    | タイプ2:
+  = @kalo.type_2
+p
+  strong
+    | 高さ:
+  = @kalo.height
+p
+  strong
+    | 重さ:
+  = @kalo.weight
+p
+  strong
+    | 説明:
+  = @kalo.description
+= link_to '編集', edit_kalo_path(@kalo)
+|  | 
+= link_to '戻る', kalos_path

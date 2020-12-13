@@ -68,3 +68,8 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 
 gem 'ransack'
+
+gem 'slim-rails'
+gem 'html2slim'
+
+gem 'bootstrap'
