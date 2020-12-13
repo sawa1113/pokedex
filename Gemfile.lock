@@ -89,6 +89,7 @@ GEM
     devise-i18n (1.9.2)
       devise (>= 4.7.1)
     devise-i18n-views (0.3.7)
+    diffy (3.4.0)
     erubi (1.10.0)
     execjs (2.7.0)
     ffi (1.13.1)
@@ -171,6 +172,9 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    ridgepole (0.8.12)
+      activerecord (>= 5.0.1, < 6.1)
+      diffy
     ruby_dep (1.5.0)
     rubyzip (2.3.0)
     sass (3.7.4)
@@ -258,6 +262,7 @@ DEPENDENCIES
   rails (~> 5.2.4, >= 5.2.4.3)
   rails-i18n
   ransack
+  ridgepole
   sass-rails (~> 5.0)
   selenium-webdriver
   slim-rails
