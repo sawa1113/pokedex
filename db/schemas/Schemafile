@@ -1,0 +1,11 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+require 'alolas.schema'
+require 'galars.schema'
+require 'hoenns.schema'
+require 'johtos.schema'
+require 'kalos.schema'
+require 'kantos.schema'
+require 'sinnohs.schema'
+require 'unovas.schema'
+require 'users.schema'
