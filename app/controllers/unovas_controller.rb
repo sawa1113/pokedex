@@ -69,6 +69,6 @@ class UnovasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def unova_params
-      params.require(:unova).permit(:name, :type_1, :type_2, :height, :weight, :description)
+      params.require(:unova).permit(:name, :type_1, :type_2, :height, :weight, :description, :number)
     end
 end

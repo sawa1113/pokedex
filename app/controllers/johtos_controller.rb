@@ -69,6 +69,6 @@ class JohtosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def johto_params
-      params.require(:johto).permit(:name, :type_1, :type_2, :height, :weight, :description)
+      params.require(:johto).permit(:name, :type_1, :type_2, :height, :weight, :description, :number)
     end
 end

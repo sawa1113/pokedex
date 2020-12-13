@@ -6,6 +6,8 @@ table
   thead
     tr
       th
+        | 番号
+      th
         | 名前
       th
         | タイプ1
@@ -21,6 +23,8 @@ table
   tbody
     - @johtos.each do |johto|
       tr
+        td
+          = johto.number
         td
           = johto.name
         td

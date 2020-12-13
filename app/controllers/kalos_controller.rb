@@ -69,6 +69,6 @@ class KalosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def kalo_params
-      params.require(:kalo).permit(:name, :type_1, :type_2, :height, :weight, :description)
+      params.require(:kalo).permit(:name, :type_1, :type_2, :height, :weight, :description, :number)
     end
 end
