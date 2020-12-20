@@ -19,6 +19,8 @@ table
         | 重さ
       th
         | 説明
+      th
+        | 画像
       th[colspan="3"]
   tbody
     - @galars.each do |galar|
@@ -37,6 +39,8 @@ table
           = galar.weight
         td
           = galar.description
+        td
+          = image_tag galar.image.to_s
         td
           = link_to '詳細', galar
         td

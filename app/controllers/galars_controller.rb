@@ -19,6 +19,7 @@ class GalarsController < ApplicationController
 
   # GET /galars/1/edit
   def edit
+    @galar = Galar.find(params[:id])
   end
 
   # POST /galars
@@ -69,6 +70,6 @@ class GalarsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def galar_params
-      params.require(:galar).permit(:name, :type_1, :type_2, :height, :weight, :description, :number)
+      params.require(:galar).permit(:name, :type_1, :type_2, :height, :weight, :description, :number, :image)
     end
 end

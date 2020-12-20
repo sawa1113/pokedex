@@ -28,6 +28,11 @@ p
   strong
     | 説明:
   = @johto.description
+- if @johto.image?
+  p
+    strong
+      | 画像:
+    = image_tag @johto.image.to_s
 = link_to '編集', edit_johto_path(@johto)
 |  | 
 = link_to '戻る', johtos_path

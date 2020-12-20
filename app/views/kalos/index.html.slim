@@ -19,6 +19,8 @@ table
         | 重さ
       th
         | 説明
+      th
+        | 画像
       th[colspan="3"]
   tbody
     - @kalos.each do |kalo|
@@ -37,6 +39,8 @@ table
           = kalo.weight
         td
           = kalo.description
+        td
+          = image_tag kalo.image.url
         td
           = link_to '詳細', kalo
         td

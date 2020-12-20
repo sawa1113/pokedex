@@ -19,6 +19,7 @@ class AlolasController < ApplicationController
 
   # GET /alolas/1/edit
   def edit
+    @alola = Alola.find(params[:id])
   end
 
   # POST /alolas
@@ -69,6 +70,6 @@ class AlolasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def alola_params
-      params.require(:alola).permit(:name, :type_1, :type_2, :height, :weight, :description, :number)
+      params.require(:alola).permit(:name, :type_1, :type_2, :height, :weight, :description, :number, :image)
     end
 end

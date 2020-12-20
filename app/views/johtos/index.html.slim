@@ -19,6 +19,8 @@ table
         | 重さ
       th
         | 説明
+      th
+        | 画像
       th[colspan="3"]
   tbody
     - @johtos.each do |johto|
@@ -37,6 +39,8 @@ table
           = johto.weight
         td
           = johto.description
+        td
+          = image_tag johto.image.to_s
         td
           = link_to '詳細', johto
         td

@@ -28,6 +28,11 @@ p
   strong
     | 説明:
   = @sinnoh.description
+- if @sinnoh.image?
+  p
+    strong
+      | 画像:
+    = image_tag @sinnoh.image.to_s
 = link_to '編集', edit_sinnoh_path(@sinnoh)
 |  | 
 = link_to '戻る', sinnohs_path

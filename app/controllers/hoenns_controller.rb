@@ -19,6 +19,7 @@ class HoennsController < ApplicationController
 
   # GET /hoenns/1/edit
   def edit
+    @hoenn = Hoenn.find(params[:id])
   end
 
   # POST /hoenns
@@ -69,6 +70,6 @@ class HoennsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def hoenn_params
-      params.require(:hoenn).permit(:name, :type_1, :type_2, :height, :weight, :description, :number)
+      params.require(:hoenn).permit(:name, :type_1, :type_2, :height, :weight, :description, :number, :image)
     end
 end
