@@ -28,6 +28,11 @@ p
   strong
     | 説明:
   = @galar.description
+- if @galar.image?
+  p
+    strong
+      | 画像:
+    = image_tag @galar.image.to_s
 = link_to '編集', edit_galar_path(@galar)
 |  | 
 = link_to '戻る', galars_path

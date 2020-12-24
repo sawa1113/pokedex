@@ -75,3 +75,5 @@ gem 'html2slim'
 gem 'bootstrap'
 
 gem 'ridgepole'
+
+gem 'carrierwave'

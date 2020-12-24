@@ -19,6 +19,7 @@ class JohtosController < ApplicationController
 
   # GET /johtos/1/edit
   def edit
+    @johto = Johto.find(params[:id])
   end
 
   # POST /johtos
@@ -69,6 +70,6 @@ class JohtosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def johto_params
-      params.require(:johto).permit(:name, :type_1, :type_2, :height, :weight, :description, :number)
+      params.require(:johto).permit(:name, :type_1, :type_2, :height, :weight, :description, :number, :image)
     end
 end

@@ -28,6 +28,11 @@ p
   strong
     | 説明:
   = @hoenn.description
+- if @hoenn.image?
+  p
+    strong
+      | 画像:
+    = image_tag @hoenn.image.to_s
 = link_to '編集', edit_hoenn_path(@hoenn)
 |  | 
 = link_to '戻る', hoenns_path

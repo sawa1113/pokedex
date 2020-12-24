@@ -19,6 +19,7 @@ class UnovasController < ApplicationController
 
   # GET /unovas/1/edit
   def edit
+    @unova = Unova.find(params[:id])
   end
 
   # POST /unovas
@@ -69,6 +70,6 @@ class UnovasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def unova_params
-      params.require(:unova).permit(:name, :type_1, :type_2, :height, :weight, :description, :number)
+      params.require(:unova).permit(:name, :type_1, :type_2, :height, :weight, :description, :number, :image)
     end
 end

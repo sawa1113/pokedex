@@ -19,6 +19,8 @@ table
         | 重さ
       th
         | 説明
+      th
+        | 画像
       th[colspan="3"]
   tbody
     - @alolas.each do |alola|
@@ -37,6 +39,8 @@ table
           = alola.weight
         td
           = alola.description
+        td
+          = image_tag alola.image.to_s
         td
           = link_to '詳細', alola
         td

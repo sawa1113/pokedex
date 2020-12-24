@@ -19,6 +19,7 @@ class KantosController < ApplicationController
 
   # GET /kantos/1/edit
   def edit
+    @kanto = Kanto.find(params[:id])
   end
 
   # POST /kantos
@@ -69,6 +70,6 @@ class KantosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def kanto_params
-      params.require(:kanto).permit(:name, :type_1, :type_2, :height, :weight, :description, :number)
+      params.require(:kanto).permit(:name, :type_1, :type_2, :height, :weight, :description, :number, :image)
     end
 end

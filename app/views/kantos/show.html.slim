@@ -28,6 +28,11 @@ p
   strong
     | 説明:
   = @kanto.description
+- if @kanto.image?
+  p
+    strong
+      | 画像:
+    = image_tag @kanto.image.to_s
 = link_to '編集', edit_kanto_path(@kanto)
 |  | 
 = link_to '戻る', kantos_path

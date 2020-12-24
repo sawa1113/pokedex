@@ -28,6 +28,11 @@ p
   strong
     | 説明:
   = @unova.description
+- if @unova.image?
+  p
+    strong
+      | 画像:
+    = image_tag @unova.image.to_s
 = link_to '編集', edit_unova_path(@unova)
 |  | 
 = link_to '戻る', unovas_path

@@ -19,6 +19,7 @@ class SinnohsController < ApplicationController
 
   # GET /sinnohs/1/edit
   def edit
+    @sinnoh = Sinnoh.find(params[:id])
   end
 
   # POST /sinnohs
@@ -69,6 +70,6 @@ class SinnohsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def sinnoh_params
-      params.require(:sinnoh).permit(:name, :type_1, :type_2, :height, :weight, :description, :number)
+      params.require(:sinnoh).permit(:name, :type_1, :type_2, :height, :weight, :description, :number, :image)
     end
 end

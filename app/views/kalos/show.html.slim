@@ -28,6 +28,11 @@ p
   strong
     | 説明:
   = @kalo.description
+- if @kalo.image?
+  p
+    strong
+      | 画像:
+    = image_tag @kalo.image.url
 = link_to '編集', edit_kalo_path(@kalo)
 |  | 
 = link_to '戻る', kalos_path
