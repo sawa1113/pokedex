@@ -1,5 +1,3 @@
-h1
-  | ポケモンずかん
 - if user_signed_in?
   h2
     |  現在 
@@ -8,15 +6,6 @@ h1
   h4
     |  メールアドレス： 
     = current_user.email
-  = link_to 'カントー地方', kantos_path
-  = link_to 'ジョウト地方', johtos_path
-  = link_to 'ホウエン地方', hoenns_path
-  = link_to 'シンオウ地方', sinnohs_path
-  = link_to 'イッシュ地方', unovas_path
-  = link_to 'カロス地方', kalos_path
-  = link_to 'アローラ地方', alolas_path
-  = link_to 'ガラル地方', galars_path
-  = link_to "ログアウト", destroy_user_session_path, method: :delete
 - else
   h2
     |  現在ログインしていません 
