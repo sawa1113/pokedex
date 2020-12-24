@@ -77,3 +77,5 @@ gem 'bootstrap'
 gem 'ridgepole'
 
 gem 'carrierwave'
+
+gem 'jquery-rails'

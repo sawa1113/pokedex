@@ -40,7 +40,7 @@ table
         td
           = kalo.description
         td
-          = image_tag kalo.image.url
+          = image_tag kalo.image.to_s
         td
           = link_to '詳細', kalo
         td
@@ -49,4 +49,3 @@ table
           = link_to '削除', kalo, method: :delete, data: { confirm: '削除してもいいですか?' }
 br
 = link_to '新しいポケモンを登録する', new_kalo_path
-= link_to 'ホーム', home_index_path
