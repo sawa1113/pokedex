@@ -1,51 +1,33 @@
-p#notice
-  = notice
-h1
-  | シンオウ地方
-table
-  thead
-    tr
-      th
-        | 番号
-      th
-        | 名前
-      th
-        | タイプ1
-      th
-        | タイプ2
-      th
-        | 高さ
-      th
-        | 重さ
-      th
-        | 説明
-      th
-        | 画像
-      th[colspan="3"]
-  tbody
-    - @sinnohs.each do |sinnoh|
+h1 シンオウ地方
+
+.mb-3
+  table.table.table-hover
+    thead.thead-default
       tr
-        td
-          = sinnoh.number
-        td
-          = sinnoh.name
-        td
-          = sinnoh.type_1
-        td
-          = sinnoh.type_2
-        td
-          = sinnoh.height
-        td
-          = sinnoh.weight
-        td
-          = sinnoh.description
-        td
-          = image_tag sinnoh.image.to_s
-        td
-          = link_to '詳細', sinnoh
-        td
-          = link_to '編集', edit_sinnoh_path(sinnoh)
-        td
-          = link_to '削除', sinnoh, method: :delete, data: { confirm: '削除してもいいですか?' }
+        th = Sinnoh.human_attribute_name(:number)
+        th = Sinnoh.human_attribute_name(:name)
+        th = Sinnoh.human_attribute_name(:type_1)
+        th = Sinnoh.human_attribute_name(:type_2)
+        th = Sinnoh.human_attribute_name(:height)
+        th = Sinnoh.human_attribute_name(:weight)
+        th = Sinnoh.human_attribute_name(:description)
+        th = Sinnoh.human_attribute_name(:image)
+    tbody
+      - @sinnohs.each do |sinnoh|
+        tr
+          td = sinnoh.number
+          td = sinnoh.name
+          td = sinnoh.type_1
+          td = sinnoh.type_2
+          td = sinnoh.height
+          td = sinnoh.weight
+          td = sinnoh.description
+          td= image_tag sinnoh.image.to_s
+          td
+            = link_to '詳細', sinnoh, class: 'btn btn-primary'
+          td
+            = link_to '編集', edit_sinnoh_path(sinnoh), class: 'btn btn-primary'
+          td
+            = link_to '削除', sinnoh, method: :delete, data: { confirm: '削除してもいいですか?' }, class: 'btn btn-danger'
 br
-= link_to '新しいポケモンを登録する', new_sinnoh_path
+= link_to '新しいポケモンを登録する', new_sinnoh_path, class: 'btn btn-primary'

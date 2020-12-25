@@ -1,38 +1,30 @@
-p#notice
-  = notice
-p
-  strong
-    | 番号:
-  = @kalo.number
-p
-  strong
-    | 名前:
-  = @kalo.name
-p
-  strong
-    | タイプ1:
-  = @kalo.type_1
-p
-  strong
-    | タイプ2:
-  = @kalo.type_2
-p
-  strong
-    | 高さ:
-  = @kalo.height
-p
-  strong
-    | 重さ:
-  = @kalo.weight
-p
-  strong
-    | 説明:
-  = @kalo.description
-- if @kalo.image?
-  p
-    strong
-      | 画像:
-    = image_tag @kalo.image.url
-= link_to '編集', edit_kalo_path(@kalo)
-|  | 
-= link_to '戻る', kalos_path
+h1 ポケモンずかんの詳細
+
+table.table.table-hover
+  tbody
+    tr
+      th = Kalo.human_attribute_name(:number)
+      td = @kalo.number
+    tr
+      th = Kalo.human_attribute_name(:name)
+      td = @kalo.name
+    tr
+      th = Kalo.human_attribute_name(:type_1)
+      td = @kalo.type_1
+    tr
+      th = Kalo.human_attribute_name(:type_2)
+      td = @kalo.type_2
+    tr
+      th = Kalo.human_attribute_name(:height)
+      td = @kalo.height
+    tr
+      th = Kalo.human_attribute_name(:weight)
+      td = @kalo.weight
+    tr
+      th = Kalo.human_attribute_name(:description)
+      td = @kalo.description
+    tr
+      th = Kalo.human_attribute_name(:image)
+      td = image_tag @kalo.image.to_s
+= link_to '編集', edit_kalo_path(@kalo), class: 'btn btn-primary mr-3'
+= link_to '戻る', kalos_path, class: 'btn btn-primary mr-3'

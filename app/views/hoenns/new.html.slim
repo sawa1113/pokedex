@@ -2,3 +2,11 @@ h1
   | 新しいポケモンをずかんに登録
 = render 'form', hoenn: @hoenn
 = link_to '戻る', hoenns_path
+
+
+h1 新しいポケモンをずかんに登録
+
+.nav.justify-content-start
+  = render 'form', hoenn: @hoenn
+
+= link_to '戻る', hoenns_path, class: 'btn btn-primary mr-3'

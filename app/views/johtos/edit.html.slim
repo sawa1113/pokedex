@@ -1,6 +1,7 @@
-h1
-  | ポケモンずかんの編集
-= render 'form', johto: @johto
-= link_to '詳細', @johto
-|  | 
-= link_to '戻る', johtos_path
+h1 ポケモンずかんの編集
+
+.nav.justify-content-start
+  = render 'form', johto: @johto
+
+= link_to '詳細', @johto, class: 'btn btn-primary mr-3'
+= link_to '戻る', johtos_path, class: 'btn btn-primary mr-3'

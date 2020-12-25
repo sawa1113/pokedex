@@ -1,6 +1,7 @@
-h1
-  | ポケモンずかんの編集
-= render 'form', alola: @alola
-= link_to '詳細', @alola
-|  | 
-= link_to '戻る', alolas_path
+h1 ポケモンずかんの編集
+
+.nav.justify-content-start
+  = render 'form', alola: @alola
+
+= link_to '詳細', @alola, class: 'btn btn-primary mr-3'
+= link_to '戻る', alolas_path, class: 'btn btn-primary mr-3'

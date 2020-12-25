@@ -1,51 +1,33 @@
-p#notice
-  = notice
-h1
-  | ガラル地方
-table
-  thead
-    tr
-      th
-        | 番号
-      th
-        | 名前
-      th
-        | タイプ1
-      th
-        | タイプ2
-      th
-        | 高さ
-      th
-        | 重さ
-      th
-        | 説明
-      th
-        | 画像
-      th[colspan="3"]
-  tbody
-    - @galars.each do |galar|
+h1 ガラル地方
+
+.mb-3
+  table.table.table-hover
+    thead.thead-default
       tr
-        td
-          = galar.number
-        td
-          = galar.name
-        td
-          = galar.type_1
-        td
-          = galar.type_2
-        td
-          = galar.height
-        td
-          = galar.weight
-        td
-          = galar.description
-        td
-          = image_tag galar.image.to_s
-        td
-          = link_to '詳細', galar
-        td
-          = link_to '編集', edit_galar_path(galar)
-        td
-          = link_to '削除', galar, method: :delete, data: { confirm: '削除してもいいですか?' }
+        th = Galar.human_attribute_name(:number)
+        th = Galar.human_attribute_name(:name)
+        th = Galar.human_attribute_name(:type_1)
+        th = Galar.human_attribute_name(:type_2)
+        th = Galar.human_attribute_name(:height)
+        th = Galar.human_attribute_name(:weight)
+        th = Galar.human_attribute_name(:description)
+        th = Galar.human_attribute_name(:image)
+    tbody
+      - @galars.each do |galar|
+        tr
+          td = galar.number
+          td = galar.name
+          td = galar.type_1
+          td = galar.type_2
+          td = galar.height
+          td = galar.weight
+          td = galar.description
+          td= image_tag galar.image.to_s
+          td
+            = link_to '詳細', galar, class: 'btn btn-primary'
+          td
+            = link_to '編集', edit_galar_path(galar), class: 'btn btn-primary'
+          td
+            = link_to '削除', galar, method: :delete, data: { confirm: '削除してもいいですか?' }, class: 'btn btn-danger'
 br
-= link_to '新しいポケモンを登録する', new_galar_path
+= link_to '新しいポケモンを登録する', new_galar_path, class: 'btn btn-primary'

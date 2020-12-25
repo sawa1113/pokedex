@@ -1,38 +1,30 @@
-p#notice
-  = notice
-p
-  strong
-    | 番号:
-  = @kanto.number
-p
-  strong
-    | 名前:
-  = @kanto.name
-p
-  strong
-    | タイプ1:
-  = @kanto.type_1
-p
-  strong
-    | タイプ2:
-  = @kanto.type_2
-p
-  strong
-    | 高さ:
-  = @kanto.height
-p
-  strong
-    | 重さ:
-  = @kanto.weight
-p
-  strong
-    | 説明:
-  = @kanto.description
-- if @kanto.image?
-  p
-    strong
-      | 画像:
-    = image_tag @kanto.image.to_s
-= link_to '編集', edit_kanto_path(@kanto)
-|  | 
-= link_to '戻る', kantos_path
+h1 ポケモンずかんの詳細
+
+table.table.table-hover
+  tbody
+    tr
+      th = Kanto.human_attribute_name(:number)
+      td = @kanto.number
+    tr
+      th = Kanto.human_attribute_name(:name)
+      td = @kanto.name
+    tr
+      th = Kanto.human_attribute_name(:type_1)
+      td = @kanto.type_1
+    tr
+      th = Kanto.human_attribute_name(:type_2)
+      td = @kanto.type_2
+    tr
+      th = Kanto.human_attribute_name(:height)
+      td = @kanto.height
+    tr
+      th = Kanto.human_attribute_name(:weight)
+      td = @kanto.weight
+    tr
+      th = Kanto.human_attribute_name(:description)
+      td = @kanto.description
+    tr
+      th = Kanto.human_attribute_name(:image)
+      td = image_tag @kanto.image.to_s
+= link_to '編集', edit_kanto_path(@kanto), class: 'btn btn-primary mr-3'
+= link_to '戻る', kantos_path, class: 'btn btn-primary mr-3'

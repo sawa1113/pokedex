@@ -1,6 +1,7 @@
-h1
-  | ポケモンずかんの編集
-= render 'form', kalo: @kalo
-= link_to '詳細', @kalo
-|  | 
-= link_to '戻る', kalos_path
+h1 ポケモンずかんの編集
+
+.nav.justify-content-start
+  = render 'form', kalo: @kalo
+
+= link_to '詳細', @kalo, class: 'btn btn-primary mr-3'
+= link_to '戻る', kalos_path, class: 'btn btn-primary mr-3'

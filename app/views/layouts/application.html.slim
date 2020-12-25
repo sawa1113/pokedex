@@ -9,8 +9,9 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = render 'layouts/header'
-    p.notice
-      = notice
-    p.alert
-      = alert
+    .app-title.navbar.navbar-expand-md.navbar-light.bg-light
+      .navbar-brand ポケモン図鑑
+    .container
+      - if flash.notice.present?
+        .alert.alert-success = flash.notice
     = yield

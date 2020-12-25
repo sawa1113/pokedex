@@ -1,51 +1,33 @@
-p#notice
-  = notice
-h1
-  | ジョウト地方
-table
-  thead
-    tr
-      th
-        | 番号
-      th
-        | 名前
-      th
-        | タイプ1
-      th
-        | タイプ2
-      th
-        | 高さ
-      th
-        | 重さ
-      th
-        | 説明
-      th
-        | 画像
-      th[colspan="3"]
-  tbody
-    - @johtos.each do |johto|
+h1 ジョウト地方
+
+.mb-3
+  table.table.table-hover
+    thead.thead-default
       tr
-        td
-          = johto.number
-        td
-          = johto.name
-        td
-          = johto.type_1
-        td
-          = johto.type_2
-        td
-          = johto.height
-        td
-          = johto.weight
-        td
-          = johto.description
-        td
-          = image_tag johto.image.to_s
-        td
-          = link_to '詳細', johto
-        td
-          = link_to '編集', edit_johto_path(johto)
-        td
-          = link_to '削除', johto, method: :delete, data: { confirm: '削除してもいいですか?' }
+        th = Johto.human_attribute_name(:number)
+        th = Johto.human_attribute_name(:name)
+        th = Johto.human_attribute_name(:type_1)
+        th = Johto.human_attribute_name(:type_2)
+        th = Johto.human_attribute_name(:height)
+        th = Johto.human_attribute_name(:weight)
+        th = Johto.human_attribute_name(:description)
+        th = Johto.human_attribute_name(:image)
+    tbody
+      - @johtos.each do |johto|
+        tr
+          td = johto.number
+          td = johto.name
+          td = johto.type_1
+          td = johto.type_2
+          td = johto.height
+          td = johto.weight
+          td = johto.description
+          td= image_tag johto.image.to_s
+          td
+            = link_to '詳細', johto, class: 'btn btn-primary'
+          td
+            = link_to '編集', edit_johto_path(johto), class: 'btn btn-primary'
+          td
+            = link_to '削除', johto, method: :delete, data: { confirm: '削除してもいいですか?' }, class: 'btn btn-danger'
 br
-= link_to '新しいポケモンを登録する', new_johto_path
+= link_to '新しいポケモンを登録する', new_johto_path, class: 'btn btn-primary'
