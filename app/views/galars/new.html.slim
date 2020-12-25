@@ -1,4 +1,6 @@
-h1
-  | 新しいポケモンをずかんに登録
-= render 'form', galar: @galar
-= link_to '戻る', galars_path
+h1 新しいポケモンをずかんに登録
+
+.nav.justify-content-start
+  = render 'form', galar: @galar
+
+= link_to '戻る', galars_path, class: 'btn btn-primary mr-3'

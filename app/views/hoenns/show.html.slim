@@ -1,38 +1,30 @@
-p#notice
-  = notice
-p
-  strong
-    | 番号:
-  = @hoenn.number
-p
-  strong
-    | 名前:
-  = @hoenn.name
-p
-  strong
-    | タイプ1:
-  = @hoenn.type_1
-p
-  strong
-    | タイプ2:
-  = @hoenn.type_2
-p
-  strong
-    | 高さ:
-  = @hoenn.height
-p
-  strong
-    | 重さ:
-  = @hoenn.weight
-p
-  strong
-    | 説明:
-  = @hoenn.description
-- if @hoenn.image?
-  p
-    strong
-      | 画像:
-    = image_tag @hoenn.image.to_s
-= link_to '編集', edit_hoenn_path(@hoenn)
-|  | 
-= link_to '戻る', hoenns_path
+h1 ポケモンずかんの詳細
+
+table.table.table-hover
+  tbody
+    tr
+      th = Hoenn.human_attribute_name(:number)
+      td = @hoenn.number
+    tr
+      th = Hoenn.human_attribute_name(:name)
+      td = @hoenn.name
+    tr
+      th = Hoenn.human_attribute_name(:type_1)
+      td = @hoenn.type_1
+    tr
+      th = Hoenn.human_attribute_name(:type_2)
+      td = @hoenn.type_2
+    tr
+      th = Hoenn.human_attribute_name(:height)
+      td = @hoenn.height
+    tr
+      th = Hoenn.human_attribute_name(:weight)
+      td = @hoenn.weight
+    tr
+      th = Hoenn.human_attribute_name(:description)
+      td = @hoenn.description
+    tr
+      th = Kanto.human_attribute_name(:image)
+      td = image_tag @hoenn.image.to_s
+= link_to '編集', edit_hoenn_path(@hoenn), class: 'btn btn-primary mr-3'
+= link_to '戻る', hoenns_path, class: 'btn btn-primary mr-3'

@@ -1,38 +1,30 @@
-p#notice
-  = notice
-p
-  strong
-    | 番号:
-  = @sinnoh.number
-p
-  strong
-    | 名前:
-  = @sinnoh.name
-p
-  strong
-    | タイプ1:
-  = @sinnoh.type_1
-p
-  strong
-    | タイプ2:
-  = @sinnoh.type_2
-p
-  strong
-    | 高さ:
-  = @sinnoh.height
-p
-  strong
-    | 重さ:
-  = @sinnoh.weight
-p
-  strong
-    | 説明:
-  = @sinnoh.description
-- if @sinnoh.image?
-  p
-    strong
-      | 画像:
-    = image_tag @sinnoh.image.to_s
-= link_to '編集', edit_sinnoh_path(@sinnoh)
-|  | 
-= link_to '戻る', sinnohs_path
+h1 ポケモンずかんの詳細
+
+table.table.table-hover
+  tbody
+    tr
+      th = Sinnoh.human_attribute_name(:number)
+      td = @sinnoh.number
+    tr
+      th = Sinnoh.human_attribute_name(:name)
+      td = @sinnoh.name
+    tr
+      th = Sinnoh.human_attribute_name(:type_1)
+      td = @sinnoh.type_1
+    tr
+      th = Sinnoh.human_attribute_name(:type_2)
+      td = @sinnoh.type_2
+    tr
+      th = Sinnoh.human_attribute_name(:height)
+      td = @sinnoh.height
+    tr
+      th = Sinnoh.human_attribute_name(:weight)
+      td = @sinnoh.weight
+    tr
+      th = Sinnoh.human_attribute_name(:description)
+      td = @sinnoh.description
+    tr
+      th = Kanto.human_attribute_name(:image)
+      td = image_tag @sinnoh.image.to_s
+= link_to '編集', edit_sinnoh_path(@sinnoh), class: 'btn btn-primary mr-3'
+= link_to '戻る', sinnohs_path, class: 'btn btn-primary mr-3'

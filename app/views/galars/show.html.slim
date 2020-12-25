@@ -1,38 +1,30 @@
-p#notice
-  = notice
-p
-  strong
-    | 番号:
-  = @galar.number
-p
-  strong
-    | 名前:
-  = @galar.name
-p
-  strong
-    | タイプ1:
-  = @galar.type_1
-p
-  strong
-    | タイプ2:
-  = @galar.type_2
-p
-  strong
-    | 高さ:
-  = @galar.height
-p
-  strong
-    | 重さ:
-  = @galar.weight
-p
-  strong
-    | 説明:
-  = @galar.description
-- if @galar.image?
-  p
-    strong
-      | 画像:
-    = image_tag @galar.image.to_s
-= link_to '編集', edit_galar_path(@galar)
-|  | 
-= link_to '戻る', galars_path
+h1 ポケモンずかんの詳細
+
+table.table.table-hover
+  tbody
+    tr
+      th = Galar.human_attribute_name(:number)
+      td = @galar.number
+    tr
+      th = Galar.human_attribute_name(:name)
+      td = @galar.name
+    tr
+      th = Galar.human_attribute_name(:type_1)
+      td = @galar.type_1
+    tr
+      th = Galar.human_attribute_name(:type_2)
+      td = @galar.type_2
+    tr
+      th = Galar.human_attribute_name(:height)
+      td = @galar.height
+    tr
+      th = Galar.human_attribute_name(:weight)
+      td = @galar.weight
+    tr
+      th = Galar.human_attribute_name(:description)
+      td = @galar.description
+    tr
+      th = Galar.human_attribute_name(:image)
+      td = image_tag @galar.image.to_s
+= link_to '編集', edit_galar_path(@galar), class: 'btn btn-primary mr-3'
+= link_to '戻る', galars_path, class: 'btn btn-primary mr-3'

@@ -1,38 +1,30 @@
-p#notice
-  = notice
-p
-  strong
-    | 番号:
-  = @unova.number
-p
-  strong
-    | 名前:
-  = @unova.name
-p
-  strong
-    | タイプ1:
-  = @unova.type_1
-p
-  strong
-    | タイプ2:
-  = @unova.type_2
-p
-  strong
-    | 高さ:
-  = @unova.height
-p
-  strong
-    | 重さ:
-  = @unova.weight
-p
-  strong
-    | 説明:
-  = @unova.description
-- if @unova.image?
-  p
-    strong
-      | 画像:
-    = image_tag @unova.image.to_s
-= link_to '編集', edit_unova_path(@unova)
-|  | 
-= link_to '戻る', unovas_path
+h1 ポケモンずかんの詳細
+
+table.table.table-hover
+  tbody
+    tr
+      th = Unova.human_attribute_name(:number)
+      td = @unova.number
+    tr
+      th = Unova.human_attribute_name(:name)
+      td = @unova.name
+    tr
+      th = Unova.human_attribute_name(:type_1)
+      td = @unova.type_1
+    tr
+      th = Unova.human_attribute_name(:type_2)
+      td = @unova.type_2
+    tr
+      th = Unova.human_attribute_name(:height)
+      td = @unova.height
+    tr
+      th = Unova.human_attribute_name(:weight)
+      td = @unova.weight
+    tr
+      th = Unova.human_attribute_name(:description)
+      td = @unova.description
+    tr
+      th = Kanto.human_attribute_name(:image)
+      td = image_tag @unova.image.to_s
+= link_to '編集', edit_unova_path(@unova), class: 'btn btn-primary mr-3'
+= link_to '戻る', unovas_path, class: 'btn btn-primary mr-3'

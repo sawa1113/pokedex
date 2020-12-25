@@ -1,6 +1,7 @@
-h1
-  | ポケモンずかんの編集
-= render 'form', hoenn: @hoenn
-= link_to '詳細', @hoenn
-|  | 
-= link_to '戻る', hoenns_path
+h1 ポケモンずかんの編集
+
+.nav.justify-content-start
+  = render 'form', hoenn: @hoenn
+
+= link_to '詳細', @hoenn, class: 'btn btn-primary mr-3'
+= link_to '戻る', hoenns_path, class: 'btn btn-primary mr-3'

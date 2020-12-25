@@ -2,3 +2,10 @@ h1
   | 新しいポケモンをずかんに登録
 = render 'form', unova: @unova
 = link_to '戻る', unovas_path
+
+h1 新しいポケモンをずかんに登録
+
+.nav.justify-content-start
+  = render 'form', unova: @unova
+
+= link_to '戻る', unovas_path, class: 'btn btn-primary mr-3'

@@ -2,3 +2,10 @@ h1
   | 新しいポケモンをずかんに登録
 = render 'form', johto: @johto
 = link_to '戻る', johtos_path
+
+h1 新しいポケモンをずかんに登録
+
+.nav.justify-content-start
+  = render 'form', johto: @johto
+
+= link_to '戻る', johtos_path, class: 'btn btn-primary mr-3'

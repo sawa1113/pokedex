@@ -1,36 +1,26 @@
-= form_with(model: kanto, local: true) do |form|
-  - if kanto.errors.any?
-    #error_explanation
-      h2
-        = pluralize(kanto.errors.count, "error")
-        |  prohibited this kanto from being saved:
-      ul
-        - kanto.errors.full_messages.each do |message|
-          li
-            = message
-  .field
-    = form.label :number
-    = form.text_field :number
-  .field
-    = form.label :name
-    = form.text_field :name
-  .field
-    = form.label :type_1
-    = form.text_field :type_1
-  .field
-    = form.label :type_2
-    = form.text_field :type_2
-  .field
-    = form.label :height
-    = form.text_field :height
-  .field
-    = form.label :weight
-    = form.text_field :weight
-  .field
-    = form.label :description
-    = form.text_field :description
-  .field
-    = form.label :image
-    = form.file_field :image
-  .actions
-    = form.submit
+= form_with model: kanto, local: true do |f|
+  .form-group
+    = f.label :number
+    = f.text_field :number, class: 'form-control'
+  .form-group
+    = f.label :name
+    = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :type_1
+    = f.text_field :type_1, class: 'form-control'
+  .form-group
+    = f.label :type_2
+    = f.text_field :type_2, class: 'form-control'
+  .form-group
+    = f.label :height
+    = f.text_field :height, class: 'form-control'
+  .form-group
+    = f.label :weight
+    = f.text_field :weight, class: 'form-control'
+  .form-group
+    = f.label :description
+    = f.text_area :description, row: 5, class: 'form-control', id: 'task_description'
+  .form-group
+    = f.label :image
+    = f.file_field :image
+  = f.submit nil, class: 'btn btn-primary'

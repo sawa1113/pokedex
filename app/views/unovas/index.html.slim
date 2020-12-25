@@ -1,51 +1,33 @@
-p#notice
-  = notice
-h1
-  | イッシュ地方
-table
-  thead
-    tr
-      th
-        | 番号
-      th
-        | 名前
-      th
-        | タイプ1
-      th
-        | タイプ2
-      th
-        | 高さ
-      th
-        | 重さ
-      th
-        | 説明
-      th
-        | 画像
-      th[colspan="3"]
-  tbody
-    - @unovas.each do |unova|
+h1 イッシュ地方
+
+.mb-3
+  table.table.table-hover
+    thead.thead-default
       tr
-        td
-          = unova.number
-        td
-          = unova.name
-        td
-          = unova.type_1
-        td
-          = unova.type_2
-        td
-          = unova.height
-        td
-          = unova.weight
-        td
-          = unova.description
-        td
-          = image_tag unova.image.to_s
-        td
-          = link_to '詳細', unova
-        td
-          = link_to '編集', edit_unova_path(unova)
-        td
-          = link_to '削除', unova, method: :delete, data: { confirm: '削除してもいいですか?' }
+        th = Unova.human_attribute_name(:number)
+        th = Unova.human_attribute_name(:name)
+        th = Unova.human_attribute_name(:type_1)
+        th = Unova.human_attribute_name(:type_2)
+        th = Unova.human_attribute_name(:height)
+        th = Unova.human_attribute_name(:weight)
+        th = Unova.human_attribute_name(:description)
+        th = Unova.human_attribute_name(:image)
+    tbody
+      - @unovas.each do |unova|
+        tr
+          td = unova.number
+          td = unova.name
+          td = unova.type_1
+          td = unova.type_2
+          td = unova.height
+          td = unova.weight
+          td = unova.description
+          td= image_tag unova.image.to_s
+          td
+            = link_to '詳細', unova, class: 'btn btn-primary'
+          td
+            = link_to '編集', edit_unova_path(unova), class: 'btn btn-primary'
+          td
+            = link_to '削除', unova, method: :delete, data: { confirm: '削除してもいいですか?' }, class: 'btn btn-danger'
 br
-= link_to '新しいポケモンを登録する', new_unova_path
+= link_to '新しいポケモンを登録する', new_unova_path, class: 'btn btn-primary'

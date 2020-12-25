@@ -1,4 +1,6 @@
-h1
-  | 新しいポケモンをずかんに登録
-= render 'form', kalo: @kalo
-= link_to '戻る', kalos_path
+h1 新しいポケモンをずかんに登録
+
+.nav.justify-content-start
+  = render 'form', kalo: @kalo
+
+= link_to '戻る', kalos_path, class: 'btn btn-primary mr-3'
